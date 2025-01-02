@@ -3,7 +3,7 @@ package Fey::Types::Internal;
 use strict;
 use warnings;
 
-our $VERSION = '0.44';
+our $VERSION = '0.45';
 
 use List::AllUtils qw( all );
 use overload ();
