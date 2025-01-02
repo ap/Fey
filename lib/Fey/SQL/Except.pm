@@ -12,6 +12,8 @@ with 'Fey::Role::SetOperation' => { keyword => 'EXCEPT' };
 
 with 'Fey::Role::SQL::Cloneable';
 
+__PACKAGE__->meta()->make_immutable();
+
 1;
 
 # ABSTRACT: Represents an EXCEPT operation

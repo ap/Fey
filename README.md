@@ -41,7 +41,7 @@ queries based on that schema.
 Loading this module does nothing. It's just here to provide docs and a
 version number for the distro.
 
-You'll want to take a look at [Fey::Schema](https://metacpan.org/pod/Fey::Schema), [Fey::Table](https://metacpan.org/pod/Fey::Table), and other
+You'll want to take a look at [Fey::Schema](https://metacpan.org/pod/Fey%3A%3ASchema), [Fey::Table](https://metacpan.org/pod/Fey%3A%3ATable), and other
 modules in the distro for more details.
 
 # WHAT IS Fey?
@@ -61,13 +61,13 @@ way to do this is to use the `Fey-Loader` distro, which will connect
 to an existing schema and generate a set of objects for you.
 
 Alternatively, you can create these objects via Fey's API. You would
-first create a [Fey::Schema](https://metacpan.org/pod/Fey::Schema) object. This object will hold all of
+first create a [Fey::Schema](https://metacpan.org/pod/Fey%3A%3ASchema) object. This object will hold all of
 your tables and foreign keys. If you want to create your schema this
-way, you should start with the [Fey::Schema](https://metacpan.org/pod/Fey::Schema), [Fey::Table](https://metacpan.org/pod/Fey::Table), and
-[Fey::FK](https://metacpan.org/pod/Fey::FK) APIs. You'll also want to use the [Fey::Column](https://metacpan.org/pod/Fey::Column) API.
+way, you should start with the [Fey::Schema](https://metacpan.org/pod/Fey%3A%3ASchema), [Fey::Table](https://metacpan.org/pod/Fey%3A%3ATable), and
+[Fey::FK](https://metacpan.org/pod/Fey%3A%3AFK) APIs. You'll also want to use the [Fey::Column](https://metacpan.org/pod/Fey%3A%3AColumn) API.
 
-Once you have a schema, you can generate SQL using [Fey::SQL](https://metacpan.org/pod/Fey::SQL), or a
-DBMS-specific subclass of [Fey::SQL](https://metacpan.org/pod/Fey::SQL).
+Once you have a schema, you can generate SQL using [Fey::SQL](https://metacpan.org/pod/Fey%3A%3ASQL), or a
+DBMS-specific subclass of [Fey::SQL](https://metacpan.org/pod/Fey%3A%3ASQL).
 
 # THE CORE Fey DISTRO
 
@@ -147,7 +147,7 @@ The core Fey modules provide a solution to the dynamic SQL
 problem. Using Fey, you can specify queries in the form of _Perl
 methods and objects_. Fey provides a set of objects to represent the
 parts of a schema, specifically tables, columns, and foreign
-keys. Using these objects along with [Fey::SQL](https://metacpan.org/pod/Fey::SQL), you can easily
+keys. Using these objects along with [Fey::SQL](https://metacpan.org/pod/Fey%3A%3ASQL), you can easily
 generate very complex queries.
 
 This core distro is also intended to be the foundation for building
@@ -205,7 +205,7 @@ smarter and more flexible about the order in which bits are added.
 `Alzabo::Runtime::Row` and `Class::AlzaboWrapper`.
 
     At the same time, query generation and the ORM are decoupled. You can
-    use [Fey::SQL](https://metacpan.org/pod/Fey::SQL) to generate queries without having to every use the
+    use [Fey::SQL](https://metacpan.org/pod/Fey%3A%3ASQL) to generate queries without having to every use the
     `Fey::ORM` ORM.
 
 - Be declarative like Moose. In particular, the `Fey::ORM` ORM is as
@@ -337,10 +337,11 @@ or through the web interface at [http://rt.cpan.org](http://rt.cpan.org).  I wil
 notified, and then you'll automatically be notified of progress on
 your bug as I make changes.
 
-Bugs may be submitted through [the RT bug tracker](http://rt.cpan.org/Public/Dist/Display.html?Name=Fey)
-(or [bug-fey@rt.cpan.org](mailto:bug-fey@rt.cpan.org)).
+Bugs may be submitted at [https://github.com/ap/Fey/issues](https://github.com/ap/Fey/issues).
 
-I am also usually active on IRC as 'drolsky' on `irc://irc.perl.org`.
+# SOURCE
+
+The source code repository for Fey can be found at [https://github.com/ap/Fey](https://github.com/ap/Fey).
 
 # DONATIONS
 
@@ -357,24 +358,27 @@ software much more, unless I get so many donations that I can consider working
 on free software full time (let's all have a chuckle at that together).
 
 To donate, log into PayPal and send money to autarch@urth.org, or use the
-button at [http://www.urth.org/~autarch/fs-donation.html](http://www.urth.org/~autarch/fs-donation.html).
+button at [https://houseabsolute.com/foss-donations/](https://houseabsolute.com/foss-donations/).
 
 # AUTHOR
 
-Dave Rolsky &lt;autarch@urth.org>
+Dave Rolsky <autarch@urth.org>
 
 # CONTRIBUTORS
 
-- Aristotle Pagaltzis &lt;pagaltzis@gmx.de>
-- hdp@glaive.weftsoar.net &lt;hdp@glaive.weftsoar.net>
+- Aristotle Pagaltzis <pagaltzis@gmx.de>
+- hdp@glaive.weftsoar.net <hdp@glaive.weftsoar.net>
 - hdp@localhost &lt;hdp@localhost>
-- hdp@rook.opensourcery.com &lt;hdp@rook.opensourcery.com>
-- Oliver Charles &lt;oliver@ocharles.org.uk>
+- hdp@rook.opensourcery.com <hdp@rook.opensourcery.com>
+- Oliver Charles <oliver@ocharles.org.uk>
 
-# COPYRIGHT AND LICENCE
+# COPYRIGHT AND LICENSE
 
-This software is Copyright (c) 2011 - 2016 by Dave Rolsky.
+This software is Copyright (c) 2011 - 2025 by Dave Rolsky.
 
 This is free software, licensed under:
 
     The Artistic License 2.0 (GPL Compatible)
+
+The full text of the license can be found in the
+`LICENSE` file included with this distribution.
