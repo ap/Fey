@@ -1,5 +1,7 @@
 {{$NEXT}}
 
+0.44    2025-01-02
+
 - The 0.41 release included a change to the SQL rendering when selecting all
   table(ish) columns. Instead of inidvidually listing out every table column,
   it would be selected as just table.* for readability. This has been reverted
