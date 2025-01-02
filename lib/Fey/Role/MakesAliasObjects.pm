@@ -37,7 +37,7 @@ role {
 
     method 'alias' => sub {
         my $self = shift;
-        my %p = @_ == 1 ? ( $name_param => $_[0] ) : @_;
+        my %p    = @_ == 1 ? ( $name_param => $_[0] ) : @_;
 
         return $alias_class->new( $self_param => $self, %p );
     };

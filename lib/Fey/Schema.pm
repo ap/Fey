@@ -126,7 +126,7 @@ sub foreign_keys_for_table {
 
     my %fks = (
         map { $_->id() => $_ }
-            map { values %{ $self->_fks()->{$name}{$_} } }
+        map { values %{ $self->_fks()->{$name}{$_} } }
             keys %{ $self->_fks()->{$name} || {} }
     );
 
@@ -152,9 +152,9 @@ sub foreign_keys_between_tables {
         :                              $table2->table()->name();
 
     my %fks = (
-        map { $_->id() => $_ }
-            grep { $_->has_tables( $name1, $name2 ) }
-            map { values %{ $self->_fks()->{$name1}{$_} } }
+        map  { $_->id() => $_ }
+        grep { $_->has_tables( $name1, $name2 ) }
+        map  { values %{ $self->_fks()->{$name1}{$_} } }
             keys %{ $self->_fks()->{$name1} || {} }
     );
 
@@ -170,8 +170,7 @@ sub foreign_keys_between_tables {
     my @fks;
 
     for my $fk ( values %fks ) {
-        my %p
-            = $table1->name() eq $fk->source_table()->name()
+        my %p = $table1->name() eq $fk->source_table()->name()
             ? (
             source_columns => [
                 $table1->columns(

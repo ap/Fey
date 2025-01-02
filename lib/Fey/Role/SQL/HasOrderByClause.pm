@@ -6,7 +6,7 @@ use namespace::autoclean;
 
 our $VERSION = '0.44';
 
-use Fey::Types qw( ArrayRef OrderByElement );
+use Fey::Types   qw( ArrayRef OrderByElement );
 use Scalar::Util qw( blessed );
 
 use Moose::Role;
